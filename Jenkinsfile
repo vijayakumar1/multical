@@ -7,6 +7,6 @@ node{
       sh "${mvnHome}/bin/mvn package"
     }
     stage('Deploy-to-Tomcat'){
-      sh 'cp /var/lib/jenkins/workspace/newpipeline/target/Calculator-0.0.1-SNAPSHOT.war /home/manju/Downloads/tomcat7/webapps'
+      sh 'cp -R /var/lib/jenkins/workspace/newpipeline/target/Calculator-0.0.1-SNAPSHOT.war /home/manju/Downloads/tomcat7/webapps'
     }
 }
