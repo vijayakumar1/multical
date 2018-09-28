@@ -7,6 +7,9 @@ node{
       sh "${mvnHome}/bin/mvn package"
     }
     stage('deploy-to- tomcat'){
+       def deploy(war, id) {
+      sh "cp ${war} /tmp/webapps/${id}.war"
+}
     
     }   
 }
