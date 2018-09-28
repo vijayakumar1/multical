@@ -8,6 +8,6 @@ node{
     }
     stage('deploy-to- tomcat'){
        def deploy(war, id) 
-       sh "cp ${Calculator-0.0.1-SNAPSHOT.war} /tmp/webapps/${02d2386a-3175-49f3-b931-8106bf3802ee}.war"
+       sh "cp ${Calculator-0.0.1-SNAPSHOT.war} /home/manju/Downloads/tomcat7/webapps/ ${02d2386a-3175-49f3-b931-8106bf3802ee}.war"
     }
 }
