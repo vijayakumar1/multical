@@ -8,7 +8,7 @@ node{
     }
     stage('Deploy-to-Tomcat'){
         ws('/var/lib/jenkins/workspace/newpipeline/target'){
-      sh 'cp -rf *.war /home/manju/Downloads/tomcat7/webapps'
+      sh 'cp -r *.war /home/manju/Downloads/tomcat7/webapps'
         }
     }
 }
