@@ -1,5 +1,4 @@
 node{
-    ws('/home/manju/jenkins_workplace'){
     stage('SCM Checkout'){
       git 'https://github.com/vijayakumar1/multical.git'
     }
@@ -10,5 +9,4 @@ node{
     stage('Deploy-to-Tomcat'){
       sh 'cp -rf /var/lib/jenkins/workspace/newpipeline/target/Calculator-0.0.1-SNAPSHOT.war /home/manju/Downloads/tomcat7/webapps'
     }
-}
 }
