@@ -4,7 +4,7 @@ node{
       git 'https://github.com/vijayakumar1/multical.git'
     }
     stage('Compile-Package'){
-      def mvnHome = tool name: 'maven', type: 'maven'
+      def mvnHome = tool name: 'maven3', type: 'maven'
       sh "${mvnHome}/bin/mvn package"
     }
     stage('Deploy-to-Tomcat'){
