@@ -6,4 +6,9 @@ node{
       def mvnHome = tool name: 'Maven', type: 'maven'
       sh "${mvnHome}/bin/mvn package"
     }
+    stage('Deploy-to-Tomcat'){
+       ws('/home/manju/.jenkins/workspace/job2/target'){
+       sh ‘cp -r *.war /etc/tomcat7/webapps’
+    }
+    }
 }
