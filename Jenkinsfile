@@ -7,8 +7,8 @@ node{
       sh "${mvnHome}/bin/mvn package"
     }
     stage('Deploy-to-Tomcat'){
-       ws('/home/manju/.jenkins/workspace/mvn_file/target/'){
-       sh 'cp -r *.war /home/manju/Downloads/apache-tomcat-7.0.92/webapps'
+       ws('/home/vijay/.jenkins/workspace/mypip/target'){
+       sh 'cp -r *.war /home/vijay/softwares/apache-tomcat-8.5.35/webapps:'
     }
    }
  }
